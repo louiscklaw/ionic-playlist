@@ -84,7 +84,7 @@ DONE:
 - [ ] skeleton-text-tryout
 - [ ] slides-tryout
 - [ ] slide-tryout
-- [ ] spinner-tryout
+- [x] spinner-tryout
 - [ ] split-pane-tryout
 - [ ] tab-bar-tryout
 - [ ] tab-button-tryout
