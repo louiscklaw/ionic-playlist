@@ -39,7 +39,7 @@ DONE:
 - [ ] header-tryout
 - [x] img-tryout
 - [ ] infinite-scroll-content-tryout
-- [ ] infinite-scroll-tryout
+- [x] infinite-scroll-tryout
 - [x] input-tryout
 - [ ] ion-icon-tryout
 - [ ] item-divider-tryout
@@ -51,7 +51,7 @@ DONE:
 - [ ] label-tryout
 - [ ] list-header-tryout
 - [ ] list-tryout
-- [ ] loading-tryout
+- [x] progress-loading-tryout
 - [ ] menu-button-tryout
 - [ ] menu-toggle-tryout
 - [ ] menu-tryout
