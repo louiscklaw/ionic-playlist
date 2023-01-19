@@ -33,9 +33,9 @@ DONE:
 - [x] datetime-tryout
 - [ ] fab-button-tryout
 - [ ] fab-list-tryout
-- [ ] fab-tryout
+- [x] fab-tryout
 - [ ] footer-tryout
-- [ ] grid-tryout
+- [x] grid-tryout
 - [ ] header-tryout
 - [ ] img-tryout
 - [ ] infinite-scroll-content-tryout
