@@ -54,7 +54,7 @@ DONE:
 - [x] progress-loading-tryout
 - [ ] menu-button-tryout
 - [ ] menu-toggle-tryout
-- [ ] menu-tryout
+- [x] menu-tryout
 - [ ] modal-tryout
 - [ ] nav-link-tryout
 - [ ] nav-tryout
