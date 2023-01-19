@@ -8,8 +8,8 @@ DONE:
 
 - [ ] accordion-group-tryout
 - [ ] accordion-tryout
-- [ ] action-sheet-tryout
-- [ ] alert-tryout
+- [x] action-sheet-tryout
+- [x] alert-tryout
 - [ ] app-tryout
 - [ ] avatar-tryout
 - [ ] back-button-tryout
