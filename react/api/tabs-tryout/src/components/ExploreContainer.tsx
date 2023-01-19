@@ -1,19 +1,19 @@
 import './ExploreContainer.css';
 
-interface ContainerProps {}
+import Home from '../pages/Home';
+
+import React from 'react';
+import { Redirect, Route } from 'react-router-dom';
+import { IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel, IonBadge } from '@ionic/react';
+import { calendar, personCircle, map, informationCircle } from 'ionicons/icons';
+import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+
+interface ContainerProps {
+  name: string;
+}
 
 const ExploreContainer: React.FC<ContainerProps> = () => {
-  return (
-    <div className="container">
-      <strong>Ready to create an app?</strong>
-      <p>
-        Start with Ionic{' '}
-        <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">
-          UI Components
-        </a>
-      </p>
-    </div>
-  );
+  return <>helloworld</>;
 };
 
 export default ExploreContainer;
