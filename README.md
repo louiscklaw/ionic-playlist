@@ -92,7 +92,7 @@ DONE:
 - [ ] tab-tryout
 - [ ] textarea-tryout
 - [x] text-tryout
-- [ ] thumbnail-tryout
+- [x] thumbnail-tryout
 - [ ] title-tryout
 - [x] toast-tryout
 - [x] toggle-tryout
