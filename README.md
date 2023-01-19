@@ -81,7 +81,7 @@ DONE:
 - [ ] segment-tryout
 - [ ] select-option-tryout
 - [ ] select-tryout
-- [ ] skeleton-text-tryout
+- [x] skeleton-text-tryout
 - [x] slides-tryout
 - [ ] slide-tryout
 - [x] spinner-tryout
