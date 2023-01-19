@@ -36,7 +36,7 @@ const App: React.FC = () => (
           <Home />
         </Route>
         <Route path="/message/:id">
-           <ViewMessage />
+          <ViewMessage />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
