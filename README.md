@@ -90,7 +90,7 @@ DONE:
 - [ ] tab-button-tryout
 - [x] tabs-tryout
 - [ ] tab-tryout
-- [ ] textarea-tryout
+- [x] textarea-tryout
 - [x] text-tryout
 - [x] thumbnail-tryout
 - [ ] title-tryout
