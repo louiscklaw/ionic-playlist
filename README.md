@@ -47,7 +47,7 @@ DONE:
 - [ ] item-options-tryout
 - [ ] item-option-tryout
 - [ ] item-sliding-tryout
-- [ ] item-tryout
+- [x] item-tryout
 - [ ] label-tryout
 - [ ] list-header-tryout
 - [ ] list-tryout

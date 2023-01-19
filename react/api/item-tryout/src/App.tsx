@@ -1,7 +1,6 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Home';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -22,6 +21,15 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import Home from './pages/Home';
+import MediaItems from './pages/MediaItems';
+import ButtonsInItems from './pages/ButtonsInItems';
+import IconsInItems from './pages/IconsInItems';
+import ItemInputs from './pages/ItemInputs';
+import HelperAndErrorText from './pages/HelperAndErrorText';
+import ItemCounter from './pages/ItemCounter';
+import CSSShadowParts from './pages/CSSShadowParts';
+
 setupIonicReact();
 
 const App: React.FC = () => (
@@ -31,6 +39,29 @@ const App: React.FC = () => (
         <Route exact path="/home">
           <Home />
         </Route>
+        <Route exact path="/MediaItems">
+          <MediaItems />
+        </Route>
+        <Route exact path="/ButtonsInItems">
+          <ButtonsInItems />
+        </Route>
+        <Route exact path="/IconsInItems">
+          <IconsInItems />
+        </Route>
+        <Route exact path="/ItemInputs">
+          <ItemInputs />
+        </Route>
+        <Route exact path="/HelperAndErrorText">
+          <HelperAndErrorText />
+        </Route>
+        <Route exact path="/ItemCounter">
+          <ItemCounter />
+        </Route>
+
+        <Route exact path="/CSSShadowParts">
+          <CSSShadowParts />
+        </Route>
+
         <Route exact path="/">
           <Redirect to="/home" />
         </Route>
