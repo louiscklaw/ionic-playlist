@@ -25,7 +25,7 @@ DONE:
 - [ ] card-title-tryout
 - [ ] card-tryout
 - [ ] checkbox-tryout
-- [ ] chip-tryout
+- [x] chip-tryout
 - [ ] col-tryout
 - [ ] content-tryout
 - [ ] c-tryout
