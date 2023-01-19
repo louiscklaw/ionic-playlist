@@ -11,7 +11,9 @@ services:
       - $PWD:/app
       - test_node_modules:/app/node_modules
 
-    command: sleep infinity
+    # command: sleep infinity
+    command: ./serve.sh
+
     # labels:
     #   - 'traefik.enable=true'
     #   - 'traefik.http.routers.whoami.rule=Host(`portfolio.iamon99.com`)'
