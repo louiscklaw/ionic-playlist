@@ -37,10 +37,10 @@ DONE:
 - [ ] footer-tryout
 - [x] grid-tryout
 - [ ] header-tryout
-- [ ] img-tryout
+- [x] img-tryout
 - [ ] infinite-scroll-content-tryout
 - [ ] infinite-scroll-tryout
-- [ ] input-tryout
+- [x] input-tryout
 - [ ] ion-icon-tryout
 - [ ] item-divider-tryout
 - [ ] item-group-tryout

@@ -1,17 +1,21 @@
 import './ExploreContainer.css';
+import React from 'react';
+import { IonImg } from '@ionic/react';
 
 interface ContainerProps {}
 
 const ExploreContainer: React.FC<ContainerProps> = () => {
   return (
     <div className="container">
-      <strong>Ready to create an app?</strong>
-      <p>
-        Start with Ionic{' '}
-        <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">
-          UI Components
-        </a>
-      </p>
+      <div>
+        <div>basic</div>
+        <div>
+          <IonImg
+            src="https://docs-demo.ionic.io/assets/madison.jpg"
+            alt="The Wisconsin State Capitol building in Madison, WI at night"
+          ></IonImg>
+        </div>
+      </div>
     </div>
   );
 };
