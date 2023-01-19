@@ -54,7 +54,8 @@
     "eject": "react-scripts eject",
     "docker_rebuild": "docker compose up -d --build && docker compose logs -f ",
     "into_docker": "docker compose exec -it test /bin/bash",
-    "format": "npx prettier --loglevel warn --write \"**/*.{js,jsx,tsx,ts}\""
+    "format": "npx prettier --loglevel warn --write \"**/*.{js,jsx,tsx,ts}\"",
+    "nodemon_format": "npx nodemon -w src --ext '*' --exec 'npm run format'"
   },
   "eslintConfig": {
     "extends": [
