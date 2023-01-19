@@ -29,8 +29,8 @@ DONE:
 - [ ] col-tryout
 - [ ] content-tryout
 - [ ] c-tryout
-- [ ] datetime-button-tryout
-- [ ] datetime-tryout
+- [x] datetime-button-tryout
+- [x] datetime-tryout
 - [ ] fab-button-tryout
 - [ ] fab-list-tryout
 - [ ] fab-tryout
