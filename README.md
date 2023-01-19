@@ -13,7 +13,7 @@ DONE:
 - [ ] app-tryout
 - [x] avatar-tryout
 - [ ] back-button-tryout
-- [ ] backdrop-tryout
+- [x] backdrop-tryout
 - [x] badge-tryout
 - [ ] breadcrumbs-tryout
 - [ ] breadcrumb-tryout

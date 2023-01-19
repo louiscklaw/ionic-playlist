@@ -1,19 +1,33 @@
-import './ExploreContainer.css';
+import React from 'react';
+import { IonBackdrop, IonHeader, IonToolbar, IonTitle, IonContent, IonCheckbox, IonButton } from '@ionic/react';
 
-interface ContainerProps {}
+import './main.css';
 
-const ExploreContainer: React.FC<ContainerProps> = () => {
+function Example() {
   return (
-    <div className="container">
-      <strong>Ready to create an app?</strong>
-      <p>
-        Start with Ionic{' '}
-        <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">
-          UI Components
-        </a>
-      </p>
-    </div>
+    <>
+      <IonBackdrop visible={true}></IonBackdrop>
+      <div className="ion-page">
+        <IonHeader>
+          <IonToolbar>
+            <IonTitle>Backdrop</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+        <IonContent className="ion-padding">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, cum aspernatur cupiditate nesciunt totam
+            perspiciatis delectus soluta laboriosam, ullam impedit porro eaque laborum optio natus sed nostrum,
+            provident expedita vero!
+          </p>
+        </IonContent>
+      </div>
+      <div id="box">
+        <IonCheckbox color="light"></IonCheckbox>
+        <IonButton class="ion-margin-start" color="light">
+          Clickable
+        </IonButton>
+      </div>
+    </>
   );
-};
-
-export default ExploreContainer;
+}
+export default Example;
