@@ -82,7 +82,7 @@ DONE:
 - [ ] select-option-tryout
 - [ ] select-tryout
 - [ ] skeleton-text-tryout
-- [ ] slides-tryout
+- [x] slides-tryout
 - [ ] slide-tryout
 - [x] spinner-tryout
 - [ ] split-pane-tryout
