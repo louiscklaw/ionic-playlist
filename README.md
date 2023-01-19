@@ -56,8 +56,8 @@ DONE:
 - [ ] menu-toggle-tryout
 - [x] menu-tryout
 - [x] modal-tryout
-- [ ] nav-link-tryout
-- [ ] nav-tryout
+- [x] nav-link-tryout
+- [x] nav-tryout
 - [ ] note-tryout
 - [ ] picker-tryout
 - [ ] popover-tryout
