@@ -1,17 +1,21 @@
 import './ExploreContainer.css';
+import { IonItem, IonSearchbar } from '@ionic/react';
 
 interface ContainerProps {}
 
 const ExploreContainer: React.FC<ContainerProps> = () => {
   return (
     <div className="container">
-      <strong>Ready to create an app?</strong>
-      <p>
-        Start with Ionic{' '}
-        <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">
-          UI Components
-        </a>
-      </p>
+      <div>
+        <div>Autogrow</div>
+        <div>
+          <IonSearchbar></IonSearchbar>
+          <IonSearchbar placeholder="Custom Placeholder"></IonSearchbar>
+          <IonSearchbar disabled={true} placeholder="Disabled"></IonSearchbar>
+          <IonSearchbar value="Value"></IonSearchbar>
+          <IonSearchbar animated={true} placeholder="Animated"></IonSearchbar>
+        </div>
+      </div>
     </div>
   );
 };

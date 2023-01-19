@@ -76,7 +76,7 @@ DONE:
 - [ ] router-tryout
 - [ ] route-tryout
 - [ ] row-tryout
-- [ ] searchbar-tryout
+- [x] searchbar-tryout
 - [ ] segment-button-tryout
 - [ ] segment-tryout
 - [ ] select-option-tryout
