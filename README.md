@@ -95,5 +95,5 @@ DONE:
 - [ ] thumbnail-tryout
 - [ ] title-tryout
 - [x] toast-tryout
-- [ ] toggle-tryout
+- [x] toggle-tryout
 - [x] toolbar-tryout
