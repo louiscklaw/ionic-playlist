@@ -18,7 +18,7 @@ DONE:
 - [ ] breadcrumbs-tryout
 - [ ] breadcrumb-tryout
 - [ ] buttons-tryout
-- [ ] button-tryout
+- [x] button-tryout
 - [ ] card-content-tryout
 - [ ] card-header-tryout
 - [ ] card-subtitle-tryout
