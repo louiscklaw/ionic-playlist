@@ -17,6 +17,7 @@ const Home: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <ExploreContainer />
+        <a href="/MultipleColumn">MultipleColumn</a>
       </IonContent>
     </IonPage>
   );

@@ -59,9 +59,9 @@ DONE:
 - [x] nav-link-tryout
 - [x] nav-tryout
 - [ ] note-tryout
-- [ ] picker-tryout
-- [ ] popover-tryout
-- [ ] progress-bar-tryout
+- [x] picker-tryout
+- [x] popover-tryout
+- [x] progress-bar-tryout
 - [ ] radio-group-tryout
 - [ ] radio-tryout
 - [ ] range-tryout
