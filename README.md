@@ -14,7 +14,7 @@ DONE:
 - [ ] avatar-tryout
 - [ ] back-button-tryout
 - [ ] backdrop-tryout
-- [ ] badge-tryout
+- [x] badge-tryout
 - [ ] breadcrumbs-tryout
 - [ ] breadcrumb-tryout
 - [ ] buttons-tryout
@@ -23,7 +23,7 @@ DONE:
 - [ ] card-header-tryout
 - [ ] card-subtitle-tryout
 - [ ] card-title-tryout
-- [ ] card-tryout
+- [​x] card-tryout
 - [ ] checkbox-tryout
 - [x] chip-tryout
 - [ ] col-tryout
