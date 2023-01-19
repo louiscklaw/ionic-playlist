@@ -11,7 +11,7 @@ DONE:
 - [x] action-sheet-tryout
 - [x] alert-tryout
 - [ ] app-tryout
-- [ ] avatar-tryout
+- [x] avatar-tryout
 - [ ] back-button-tryout
 - [ ] backdrop-tryout
 - [x] badge-tryout
