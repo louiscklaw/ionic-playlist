@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 
 import './ExploreContainer.css';
+
 import { IonButton, useIonAlert } from '@ionic/react';
+
+import './main.css';
 
 interface ContainerProps {}
 
@@ -30,7 +33,6 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
         >
           Click Me
         </IonButton>
-
         <div>
           <IonButton
             onClick={() =>
@@ -60,6 +62,90 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
           </IonButton>
           <p>{handlerMessage}</p>
           <p>{roleMessage}</p>
+        </div>
+        <div>
+          <IonButton
+            onClick={() =>
+              presentAlert({
+                header: 'Please enter your info',
+                buttons: ['OK'],
+                inputs: [
+                  {
+                    placeholder: 'Name',
+                  },
+                  {
+                    placeholder: 'Nickname (max 8 characters)',
+                    attributes: {
+                      maxlength: 8,
+                    },
+                  },
+                  {
+                    type: 'number',
+                    placeholder: 'Age',
+                    min: 1,
+                    max: 100,
+                  },
+                  {
+                    type: 'textarea',
+                    placeholder: 'A little about yourself',
+                  },
+                ],
+              })
+            }
+          >
+            Click Me
+          </IonButton>
+        </div>
+        <div>
+          <IonButton
+            onClick={() =>
+              presentAlert({
+                header: 'Select your favorite color',
+                buttons: ['OK'],
+                inputs: [
+                  {
+                    label: 'Red',
+                    type: 'radio',
+                    value: 'red',
+                  },
+                  {
+                    label: 'Blue',
+                    type: 'radio',
+                    value: 'blue',
+                  },
+                  {
+                    label: 'Green',
+                    type: 'radio',
+                    value: 'green',
+                  },
+                ],
+              })
+            }
+          >
+            Click Me (radio)
+          </IonButton>
+        </div>
+        <div>
+          <IonButton
+            onClick={() =>
+              presentAlert({
+                header: 'Are you sure?',
+                cssClass: 'custom-alert',
+                buttons: [
+                  {
+                    text: 'No',
+                    cssClass: 'alert-button-cancel',
+                  },
+                  {
+                    text: 'Yes',
+                    cssClass: 'alert-button-confirm',
+                  },
+                ],
+              })
+            }
+          >
+            Click Me customize
+          </IonButton>
         </div>
       </p>
     </div>
