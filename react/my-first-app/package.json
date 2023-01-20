@@ -31,7 +31,6 @@
     "react-dom": "^18.2.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^5.0.0",
     "typescript": "^4.1.3",
     "web-vitals": "^0.2.4",
     "workbox-background-sync": "^5.1.4",
@@ -55,6 +54,7 @@
     "docker_rebuild": "docker compose up -d --build && docker compose logs -f ",
     "into_docker": "docker compose exec -it test /bin/bash",
     "format": "npx prettier --loglevel warn --write \"**/*.{js,jsx,tsx,ts}\"",
+    "gitUpdate": "git add . && git commit -m \"update fedora,\" && git push",
     "nodemon_format": "npx nodemon -w src --ext '*' --exec 'npm run format'"
   },
   "eslintConfig": {
@@ -76,7 +76,8 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "4.6.2"
+    "@capacitor/cli": "4.6.2",
+    "react-scripts": "5.0.1"
   },
   "description": "An Ionic project"
 }
