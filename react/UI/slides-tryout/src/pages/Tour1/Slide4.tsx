@@ -25,12 +25,7 @@ const slide_text_style = { lineHeight: '2rem' };
 const Slide4: React.FC = () => {
   return (
     <>
-      <div style={{ height: '100%', width: '100%' }}>
-        <div>
-          <IonButton className="skip_button" href="/home">
-            skip
-          </IonButton>
-        </div>
+      <div>
         <div
           style={{
             width: '100%',
@@ -52,16 +47,18 @@ const Slide4: React.FC = () => {
           <div style={{ marginTop: '3rem', fontWeight: 300, marginLeft: '3rem', marginRight: '3rem' }}>
             <IonText style={slide_text_style}>
               <h5>H3: The quick brown fox jumps over the lazy dog</h5>
-
               <p>待進變果沒致友環健問水法代人苦天。</p>
             </IonText>
-            <div>
-              <IonCheckbox slot="start"></IonCheckbox>
-              <IonLabel>I agree to the terms and conditions</IonLabel>
-            </div>
 
-            <div>
-              <IonButton href="/home">start</IonButton>
+            <div style={{ marginTop: '3rem' }}>
+              <div style={{ display: 'inline-flex', flexDirection: 'row', alignItems: 'center' }}>
+                <IonCheckbox slot="start"></IonCheckbox>
+                <IonLabel>I agree to the terms and conditions</IonLabel>
+              </div>
+
+              <div style={{ marginTop: '3rem' }}>
+                <IonButton href="/home">start</IonButton>
+              </div>
             </div>
           </div>
         </div>

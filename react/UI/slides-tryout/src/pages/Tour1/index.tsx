@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../../components/ExploreContainer';
 // import './Home.css';
 // import './main.css';
@@ -12,12 +12,35 @@ import Slide4 from './Slide4';
 const slideOpts = {
   initialSlide: 0,
   speed: 400,
-  lockSwipeToNext: true,
 };
+
+const config = { showSkip: true };
 
 const Home: React.FC = () => {
   return (
     <IonContent>
+      <div
+        style={{
+          position: 'fixed',
+          zIndex: 9999,
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'row',
+
+          height: '30px',
+        }}
+      >
+        <div style={{ flexGrow: 1 }}>{}</div>
+        <div>
+          {config.showSkip ? (
+            <IonButton className="skip_button" href="/home">
+              skip
+            </IonButton>
+          ) : (
+            <></>
+          )}
+        </div>
+      </div>
       <IonSlides pager={true} options={slideOpts}>
         <IonSlide>
           <Slide1 />
@@ -27,7 +50,7 @@ const Home: React.FC = () => {
         </IonSlide>
         <IonSlide>
           <Slide3 />
-        </IonSlide>{' '}
+        </IonSlide>
         <IonSlide>
           <Slide4 />
         </IonSlide>

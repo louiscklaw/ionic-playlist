@@ -25,12 +25,7 @@ const slide_text_style = { lineHeight: '2rem' };
 const Slide3: React.FC = () => {
   return (
     <>
-      <div style={{ height: '100%', width: '100%' }}>
-        <div>
-          <IonButton className="skip_button" href="/home">
-            skip
-          </IonButton>
-        </div>
+      <div>
         <div
           style={{
             width: '100%',
