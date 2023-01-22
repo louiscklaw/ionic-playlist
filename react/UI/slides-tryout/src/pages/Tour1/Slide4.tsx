@@ -17,11 +17,12 @@ import {
 } from '@ionic/react';
 import { warning } from 'ionicons/icons';
 
-import slide1_png from './slide2.png';
+import slide4_png from './slide4.png';
+import './skip_button.css';
 
 const slide_text_style = { lineHeight: '2rem' };
 
-const Slide2: React.FC = () => {
+const Slide4: React.FC = () => {
   return (
     <>
       <div style={{ height: '100%', width: '100%' }}>
@@ -46,18 +47,22 @@ const Slide2: React.FC = () => {
               paddingRight: '5rem',
             }}
           >
-            <img src={slide1_png} />
+            <img src={slide4_png} />
           </div>
           <div style={{ marginTop: '3rem', fontWeight: 300, marginLeft: '3rem', marginRight: '3rem' }}>
             <IonText style={slide_text_style}>
               <h5>H3: The quick brown fox jumps over the lazy dog</h5>
 
-              <p>
-                待進變果沒致友環健問水法代人苦天。 業立臺四即文善公作有往，等怕準命小電個。
-                阪ハウワ応92勤常勉旋72依過らつ。門むば隊就メツヘ突長山テ碁人ゆッ Lorem der of human happiness. No one
-                rejects, dislikes, or avoids pleasure itself
-              </p>
+              <p>待進變果沒致友環健問水法代人苦天。</p>
             </IonText>
+            <div>
+              <IonCheckbox slot="start"></IonCheckbox>
+              <IonLabel>I agree to the terms and conditions</IonLabel>
+            </div>
+
+            <div>
+              <IonButton href="/home">start</IonButton>
+            </div>
           </div>
         </div>
       </div>
@@ -65,4 +70,4 @@ const Slide2: React.FC = () => {
   );
 };
 
-export default Slide2;
+export default Slide4;

@@ -3,27 +3,62 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 // import './Home.css';
 // import './main.css';
 import React from 'react';
-import { IonLabel, IonCheckbox, IonButton, IonSlides, IonSlide } from '@ionic/react';
+import {
+  IonIcon,
+  IonText,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonLabel,
+  IonCheckbox,
+  IonButton,
+  IonSlides,
+  IonSlide,
+} from '@ionic/react';
+import { warning } from 'ionicons/icons';
 
-const slideOpts = {
-  initialSlide: 1,
-  speed: 400,
-};
+import slide3_png from './slide3.png';
+import './skip_button.css';
+
+const slide_text_style = { lineHeight: '2rem' };
 
 const Slide3: React.FC = () => {
   return (
     <>
-      <div>
-        <h1>Slide 3 12321</h1>
-
+      <div style={{ height: '100%', width: '100%' }}>
         <div>
-          <div>
-            <IonCheckbox slot="start"></IonCheckbox>
-            <IonLabel>I agree to the terms and conditions</IonLabel>
+          <IonButton className="skip_button" href="/home">
+            skip
+          </IonButton>
+        </div>
+        <div
+          style={{
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-start',
+            alignItems: 'center',
+          }}
+        >
+          <div
+            style={{
+              paddingLeft: '5rem',
+              paddingRight: '5rem',
+            }}
+          >
+            <img src={slide3_png} />
           </div>
+          <div style={{ marginTop: '3rem', fontWeight: 300, marginLeft: '3rem', marginRight: '3rem' }}>
+            <IonText style={slide_text_style}>
+              <h5>H3: The quick brown fox jumps over the lazy dog</h5>
 
-          <div>
-            <IonButton href="/home">helloworld</IonButton>
+              <p>
+                待進變果沒致友環健問水法代人苦天。 業立臺四即文善公作有往，等怕準命小電個。
+                阪ハウワ応92勤常勉旋72依過らつ。門むば隊就メツヘ突長山テ碁人ゆッ Lorem der of human happiness. No one
+                rejects, dislikes, or avoids pleasure itself
+              </p>
+            </IonText>
           </div>
         </div>
       </div>

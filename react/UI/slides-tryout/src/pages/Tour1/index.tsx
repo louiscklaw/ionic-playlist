@@ -7,10 +7,12 @@ import { IonSlides, IonSlide } from '@ionic/react';
 import Slide3 from './Slide3';
 import Slide2 from './Slide2';
 import Slide1 from './Slide1';
+import Slide4 from './Slide4';
 
 const slideOpts = {
   initialSlide: 0,
   speed: 400,
+  lockSwipeToNext: true,
 };
 
 const Home: React.FC = () => {
@@ -25,6 +27,9 @@ const Home: React.FC = () => {
         </IonSlide>
         <IonSlide>
           <Slide3 />
+        </IonSlide>{' '}
+        <IonSlide>
+          <Slide4 />
         </IonSlide>
       </IonSlides>
     </IonContent>

@@ -17,7 +17,7 @@ import {
 } from '@ionic/react';
 import { warning } from 'ionicons/icons';
 
-import slide1_svg from './undraw_cloud_hosting_7xb1.svg';
+import slide1_png from './slide1.png';
 import './skip_button.css';
 
 const slide_text_style = { lineHeight: '2rem' };
@@ -47,7 +47,7 @@ const Slide1: React.FC = () => {
               paddingRight: '5rem',
             }}
           >
-            <img src={slide1_svg} />
+            <img src={slide1_png} />
           </div>
           <div style={{ marginTop: '3rem', fontWeight: 300, marginLeft: '3rem', marginRight: '3rem' }}>
             <IonText style={slide_text_style}>
