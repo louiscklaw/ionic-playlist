@@ -5,6 +5,8 @@ import ExploreContainer from '../../components/ExploreContainer';
 import React from 'react';
 import { IonSlides, IonSlide } from '@ionic/react';
 import Slide3 from './Slide3';
+import Slide2 from './Slide2';
+import Slide1 from './Slide1';
 
 const slideOpts = {
   initialSlide: 0,
@@ -16,10 +18,10 @@ const Home: React.FC = () => {
     <IonContent>
       <IonSlides pager={true} options={slideOpts}>
         <IonSlide>
-          <h1>Slide 1</h1>
+          <Slide1 />
         </IonSlide>
         <IonSlide>
-          <h1>Slide 2</h1>
+          <Slide2 />
         </IonSlide>
         <IonSlide>
           <Slide3 />
