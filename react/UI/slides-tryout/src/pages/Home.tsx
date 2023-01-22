@@ -3,7 +3,7 @@ import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
 import './main.css';
 import React from 'react';
-import { IonSlides, IonSlide } from '@ionic/react';
+import { IonButton, IonSlides, IonSlide } from '@ionic/react';
 
 const slideOpts = {
   initialSlide: 1,
@@ -13,17 +13,10 @@ const slideOpts = {
 const Home: React.FC = () => {
   return (
     <IonContent>
-      <IonSlides pager={true} options={slideOpts}>
-        <IonSlide>
-          <h1>Slide 1</h1>
-        </IonSlide>
-        <IonSlide>
-          <h1>Slide 2</h1>
-        </IonSlide>
-        <IonSlide>
-          <h1>Slide 3</h1>
-        </IonSlide>
-      </IonSlides>
+      <IonPage>
+        <div>This is home </div>
+        <IonButton href="/tour1">restart tour</IonButton>
+      </IonPage>
     </IonContent>
   );
 };
