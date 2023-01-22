@@ -1,0 +1,52 @@
+{
+  "name": "ionic-react-conference-app",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@capacitor/core": "1.3.0",
+    "@ionic/react": "^6.1.15",
+    "@ionic/react-router": "^6.1.15",
+    "@types/jest": "24.0.18",
+    "@types/node": "12.7.5",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router": "^5.1.8",
+    "@types/react-router-dom": "^5.1.5",
+    "date-fns": "^2.25.0",
+    "ionicons": "^5.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.1",
+    "reselect": "^4.0.0",
+    "sass": "^1.43.4",
+    "swiper": "^7.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "into_docker": "docker compose exec -it test bash",
+    "format": "npx prettier --loglevel warn --write \"**/*.{js,jsx,tsx,ts}\"",
+    "nodemon_format": "npx nodemon -w src --ext '*' --exec 'npm run format'"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "description": "An Ionic project",
+  "devDependencies": {
+    "@capacitor/cli": "1.3.0",
+    "@testing-library/react": "^9.3.1",
+    "@types/googlemaps": "^3.38.0",
+    "prettier": "^2.8.3",
+    "typescript": "~3.8.0"
+  }
+}
