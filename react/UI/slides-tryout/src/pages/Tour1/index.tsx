@@ -11,12 +11,45 @@ import Slide4 from './Slide4';
 
 const slideOpts = {
   initialSlide: 0,
-  speed: 400,
+  speed: 300,
 };
 
 const config = { showSkip: true };
 
 const Home: React.FC = () => {
+  let ionSliderRef: any = React.useRef();
+  let skipRef: any = React.useRef();
+
+  // React.useEffect(() => {
+  //   function visitLastSlide() {
+  //     skipRef.current.style.display = 'none';
+  //   }
+
+  //   if (ionSliderRef?.current) {
+  //     ionSliderRef.current.addEventListener('ionSlideReachEnd', visitLastSlide);
+  //   }
+
+  //   return () => {
+  //     ionSliderRef.current.removeEventListener('ionSlideReachEnd', visitLastSlide, true);
+  //   };
+  // }, [ionSliderRef?.current]);
+
+  type getIndexType = (event: Event | null) => {
+    // type
+  };
+  const getIndex: getIndexType = async event => {
+    if (event !== null) {
+      let index: number = 0;
+      const slider = event.target as HTMLIonSlidesElement;
+      index = await slider.getActiveIndex();
+      // setCurrentPage(index);
+      console.dir({ index: index, isEnd: slider.isEnd() });
+      if ((await slider.isEnd()) == true) {
+        skipRef.current.style.display = 'none';
+      }
+    }
+  };
+
   return (
     <IonContent>
       <div
@@ -26,22 +59,26 @@ const Home: React.FC = () => {
           width: '100%',
           display: 'flex',
           flexDirection: 'row',
-
           height: '30px',
         }}
       >
         <div style={{ flexGrow: 1 }}>{}</div>
         <div>
-          {config.showSkip ? (
-            <IonButton className="skip_button" href="/home">
-              skip
-            </IonButton>
-          ) : (
-            <></>
-          )}
+          <IonButton ref={skipRef} className="skip_button" href="/home">
+            skip
+          </IonButton>
         </div>
       </div>
-      <IonSlides pager={true} options={slideOpts}>
+
+      <IonSlides
+        pager={true}
+        options={slideOpts}
+        onIonSlideReachEnd={() => {
+          skipRef.current.style.display = 'none';
+        }}
+        onIonSlideDidChange={(e: Event | null) => getIndex(e)}
+        ref={ionSliderRef}
+      >
         <IonSlide>
           <Slide1 />
         </IonSlide>
