@@ -15,7 +15,6 @@ const MainTabs: React.FC<MainTabsProps> = () => {
   let [tabBarSlot, setTabBarSlot] = useState<'bottom' | undefined>(undefined);
 
   const updateTabBarSlot = () => {
-    console.log({ log: document.querySelectorAll('.menu-pane-visible').length });
     if (document.querySelectorAll('.menu-pane-visible').length > 0) {
       setTabBarSlot(undefined);
     } else {
