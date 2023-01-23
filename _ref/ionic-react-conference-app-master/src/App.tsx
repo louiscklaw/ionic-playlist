@@ -84,9 +84,9 @@ const IonicApp: React.FC<IonicAppProps> = ({
           <Menu />
           <IonRouterOutlet id="main">
             {/*
-                We use IonRoute here to keep the tabs state intact,
-                which makes transitions between tabs and non tab pages smooth
-                */}
+              We use IonRoute here to keep the tabs state intact,
+              which makes transitions between tabs and non tab pages smooth
+            */}
             <Route path="/tabs" render={() => <MainTabs />} />
             <Route path="/account" component={Account} />
             <Route path="/login" component={Login} />

@@ -67,14 +67,13 @@ const About: React.FC<AboutProps> = () => {
           <div className="about-image seattle" style={{ opacity: location === 'seattle' ? '1' : undefined }}></div>
         </div>
         <div className="about-info">
-          <h3 className="ion-padding-top ion-padding-start">About</h3>
+          <h3 className="ion-padding-top ion-padding-start">待進變果沒致友環健問水法代人苦天。</h3>
 
           <p className="ion-padding-start ion-padding-end">
-            The Ionic Conference is a one-day conference on {displayDate(conferenceDate, 'MMM dd, yyyy')} featuring
-            talks from the Ionic team. It is focused on Ionic applications being built with Ionic Framework. This
-            includes migrating apps to the latest version of the framework, Angular concepts, Webpack, Sass, and many
-            other technologies used in Ionic 2. Tickets are completely sold out, and we’re expecting more than 1000
-            developers – making this the largest Ionic conference ever!
+            阪ハウワ応92勤常勉旋72依過らつ。門むば隊就メツヘ突長山テ碁人ゆッ
+            歳両ら止都トカハキ締素ぎぜつ索能経初臣こ党求ぼ担効カタハネ文会ヲツレ端作67神フ測相りち挑坂ぶ。
+            応ハシカ向2捜せぽけリ覧郷ユヤワサ準助7子群メソマ直林無ノヱク総九るね法
+            右み料生レソヱ犯2属スタリチ海新志合のみル。落国がどゅト備初
           </p>
 
           <h3 className="ion-padding-top ion-padding-start">Details</h3>
