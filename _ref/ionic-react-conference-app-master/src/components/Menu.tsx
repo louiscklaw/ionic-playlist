@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { RouteComponentProps, withRouter, useLocation } from 'react-router';
 
 import {
@@ -70,6 +70,18 @@ interface MenuProps extends RouteComponentProps, StateProps, DispatchProps {}
 
 const Menu: React.FC<MenuProps> = ({ darkMode, history, isAuthenticated, setDarkMode, menuEnabled }) => {
   const location = useLocation();
+  const [disableMenu, setDisableMenu] = useState(!menuEnabled);
+  const menuRef = useRef();
+
+  React.useEffect(() => {
+    console.log(location.pathname);
+    if (['/signup', '/login'].indexOf(location.pathname) > -1) {
+      console.log({ menuEnabled });
+      setDisableMenu(true);
+    } else {
+      setDisableMenu(!menuEnabled);
+    }
+  }, [location]);
 
   function renderlistItems(list: Pages[]) {
     return list
@@ -90,7 +102,7 @@ const Menu: React.FC<MenuProps> = ({ darkMode, history, isAuthenticated, setDark
   }
 
   return (
-    <IonMenu type="overlay" disabled={!menuEnabled} contentId="main">
+    <IonMenu type="overlay" disabled={disableMenu} contentId="main" id="left-menu">
       <IonContent forceOverscroll={false}>
         <IonList lines="none">
           <IonListHeader>Conference</IonListHeader>
