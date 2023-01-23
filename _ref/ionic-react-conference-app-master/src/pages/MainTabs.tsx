@@ -9,6 +9,7 @@ import SessionDetail from './SessionDetail';
 import MapView from './MapView';
 import About from './About';
 import TestSvg from '../components/TestSvg';
+import BottomDrawer from '../components/BottomDrawer';
 
 interface MainTabsProps {}
 
@@ -77,6 +78,8 @@ const MainTabs: React.FC<MainTabsProps> = () => {
 
   return (
     <>
+      <BottomDrawer />
+
       <IonTabs>
         <IonRouterOutlet>
           <Redirect exact path="/tabs" to="/tabs/schedule" />
@@ -135,6 +138,7 @@ const MainTabs: React.FC<MainTabsProps> = () => {
           justifyContent: 'center',
           alignItems: 'center',
         }}
+        onClick={e => console.dir('hello world')}
       >
         <TestSvg />
       </div>
