@@ -12,23 +12,27 @@ import About from './About';
 interface MainTabsProps {}
 
 const MainTabs: React.FC<MainTabsProps> = () => {
-  let [displayTabBar, setDisplayTabBar] = useState('none');
-  const toolbarRef = useRef<HTMLIonTabBarElement>(null);
-  const test_undefined = undefined;
+  let [tabBarSlot, setTabBarSlot] = useState<'bottom' | undefined>(undefined);
 
-  let [tabBarSlot, setTabBarSlot] = useState<'bottom' | undefined>('bottom');
+  const updateTabBarSlot = () => {
+    console.log({ log: document.querySelectorAll('.menu-pane-visible').length });
+    if (document.querySelectorAll('.menu-pane-visible').length > 0) {
+      setTabBarSlot(undefined);
+    } else {
+      setTabBarSlot('bottom');
+    }
+  };
 
   React.useEffect(() => {
-    const updateTabBarSlot = (e: UIEvent) => {
-      if (document.querySelectorAll('.menu-pane-visible').length > 0) {
-        setTabBarSlot(undefined);
-      } else {
-        setTabBarSlot('bottom');
-      }
-    };
-    window.addEventListener('resize', updateTabBarSlot);
+    // initial run on window open
+    setTimeout(() => {
+      updateTabBarSlot();
+    }, 1);
 
+    // attach on window resize
+    window.addEventListener('resize', updateTabBarSlot);
     return () => {
+      // remove on window closed
       window.removeEventListener('resize', updateTabBarSlot);
     };
   }, []);
@@ -39,9 +43,9 @@ const MainTabs: React.FC<MainTabsProps> = () => {
         <IonRouterOutlet>
           <Redirect exact path="/tabs" to="/tabs/schedule" />
           {/*
-          Using the render method prop cuts down the number of renders your components will have due to route changes.
-          Use the component prop when your component depends on the RouterComponentProps passed in automatically.
-        */}
+            Using the render method prop cuts down the number of renders your components will have due to route changes.
+            Use the component prop when your component depends on the RouterComponentProps passed in automatically.
+          */}
           <Route path="/tabs/schedule" render={() => <SchedulePage />} exact={true} />
           <Route path="/tabs/speakers" render={() => <SpeakerList />} exact={true} />
           <Route path="/tabs/speakers/:id" component={SpeakerDetail} exact={true} />

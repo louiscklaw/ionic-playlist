@@ -71,10 +71,9 @@ interface MenuProps extends RouteComponentProps, StateProps, DispatchProps {}
 const Menu: React.FC<MenuProps> = ({ darkMode, history, isAuthenticated, setDarkMode, menuEnabled }) => {
   const location = useLocation();
   const [disableMenu, setDisableMenu] = useState(!menuEnabled);
-  const menuRef = useRef();
+  const ionMenuRef = useRef<HTMLIonMenuElement | null>(null);
 
   React.useEffect(() => {
-    console.log(location.pathname);
     if (['/signup', '/login'].indexOf(location.pathname) > -1) {
       console.log({ menuEnabled });
       setDisableMenu(true);
@@ -102,7 +101,7 @@ const Menu: React.FC<MenuProps> = ({ darkMode, history, isAuthenticated, setDark
   }
 
   return (
-    <IonMenu type="overlay" disabled={disableMenu} contentId="main" id="left-menu">
+    <IonMenu ref={ionMenuRef} type="overlay" disabled={disableMenu} contentId="main" id="left-menu">
       <IonContent forceOverscroll={false}>
         <IonList lines="none">
           <IonListHeader>Conference</IonListHeader>
