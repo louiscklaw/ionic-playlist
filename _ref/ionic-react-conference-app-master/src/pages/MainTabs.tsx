@@ -19,14 +19,18 @@ const MainTabs: React.FC<MainTabsProps> = () => {
   let [tabBarSlot, setTabBarSlot] = useState<'bottom' | undefined>('bottom');
 
   React.useEffect(() => {
-    window.addEventListener('resize', e => {
+    const updateTabBarSlot = (e: UIEvent) => {
       if (document.querySelectorAll('.menu-pane-visible').length > 0) {
         setTabBarSlot(undefined);
       } else {
         setTabBarSlot('bottom');
       }
-    });
-    console.log('listen resizing');
+    };
+    window.addEventListener('resize', updateTabBarSlot);
+
+    return () => {
+      window.removeEventListener('resize', updateTabBarSlot);
+    };
   }, []);
 
   return (
