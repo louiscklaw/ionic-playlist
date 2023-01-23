@@ -102,12 +102,12 @@ const About: React.FC<AboutProps> = () => {
                 side="top"
                 alignment="end"
               >
-                <IonDatetime
+                {/* <IonDatetime
                   max="2056"
                   value={conferenceDate}
                   onIonChange={e => setConferenceDate(e.detail.value!)}
                   presentation="date"
-                ></IonDatetime>
+                ></IonDatetime> */}
               </IonPopover>
             </IonItem>
           </IonList>
