@@ -4,7 +4,7 @@ import React from 'react';
 function BlankPage() {
   return (
     <>
-      <IonPage>
+      <IonPage id="blank-page">
         <IonContent>Blank page</IonContent>
       </IonPage>
     </>
