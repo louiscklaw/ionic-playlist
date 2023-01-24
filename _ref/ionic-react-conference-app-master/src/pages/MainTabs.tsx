@@ -105,16 +105,15 @@ const MainTabs: React.FC<MainTabsProps> = () => {
   }, [test_location?.pathname]);
 
   const updateTabBarSlot = () => {
-    const test = document.querySelectorAll<HTMLElement>('.middle-menu-button');
-    const menuPlateShown = document.querySelectorAll('.menu-pane-visible').length > 0;
-
-    if (menuPlateShown) {
-      setTabBarSlot(undefined);
-      test[0].style.display = 'none';
-    } else {
-      setTabBarSlot('bottom');
-      test[0].style.display = 'flex';
-    }
+    // const test = document.querySelectorAll<HTMLElement>('.middle-menu-button');
+    // const menuPlateShown = document.querySelectorAll('.menu-pane-visible').length > 0;
+    // if (menuPlateShown) {
+    //   setTabBarSlot(undefined);
+    //   test[0].style.display = 'none';
+    // } else {
+    //   setTabBarSlot('bottom');
+    //   test[0].style.display = 'flex';
+    // }
   };
 
   React.useEffect(() => {
@@ -250,7 +249,7 @@ const MainTabs: React.FC<MainTabsProps> = () => {
           <Route path="/tabs/about" render={() => <About />} exact={true} />
         </IonRouterOutlet>
 
-        <IonTabBar className={'menu-button'} slot={tabBarSlot}>
+        <IonTabBar className={'menu-button'} slot={'bottom'}>
           <IonTabButton tab="schedule" href="/tabs/schedule">
             {/* <IonIcon icon={calendar} /> */}
             {/* <IonLabel>待進變果沒</IonLabel> */}
