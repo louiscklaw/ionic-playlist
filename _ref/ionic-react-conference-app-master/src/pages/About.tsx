@@ -61,10 +61,20 @@ const About: React.FC<AboutProps> = () => {
 
         <div className="about-header">
           {/* Instead of loading an image each time the select changes, use opacity to transition them */}
-          <div className="about-image madison" style={{ opacity: location === 'madison' ? '1' : undefined }}></div>
-          <div className="about-image austin" style={{ opacity: location === 'austin' ? '1' : undefined }}></div>
-          <div className="about-image chicago" style={{ opacity: location === 'chicago' ? '1' : undefined }}></div>
-          <div className="about-image seattle" style={{ opacity: location === 'seattle' ? '1' : undefined }}></div>
+          {/* <div className="about-image madison" style={{ opacity: location === 'madison' ? '1' : undefined }}></div> */}
+          {/* <div className="about-image austin" style={{ opacity: location === 'austin' ? '1' : undefined }}></div> */}
+          {/* <div className="about-image chicago" style={{ opacity: location === 'chicago' ? '1' : undefined }}></div> */}
+          {/* <div className="about-image seattle" style={{ opacity: location === 'seattle' ? '1' : undefined }}></div> */}
+          <div
+            className="about-image"
+            style={{
+              backgroundImage: `url("https://images.unsplash.com/photo-1455587734955-081b22074882")`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              opacity: 1,
+            }}
+          ></div>
         </div>
         <div className="about-info">
           <h3 className="ion-padding-top ion-padding-start">待進變果沒致友環健問水法代人苦天。</h3>
