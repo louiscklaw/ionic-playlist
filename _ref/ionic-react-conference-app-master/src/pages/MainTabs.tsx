@@ -179,7 +179,6 @@ const MainTabs: React.FC<MainTabsProps> = () => {
 
   return (
     <>
-      {/* <BottomDrawer /> */}
       <Drawer
         anchor={anchor}
         open={state[anchor]}
