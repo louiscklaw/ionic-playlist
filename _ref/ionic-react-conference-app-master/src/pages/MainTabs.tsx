@@ -106,8 +106,9 @@ const MainTabs: React.FC<MainTabsProps> = () => {
 
   const updateTabBarSlot = () => {
     const test = document.querySelectorAll<HTMLElement>('.middle-menu-button');
+    const menuPlateShown = document.querySelectorAll('.menu-pane-visible').length > 0;
 
-    if (document.querySelectorAll('.menu-pane-visible').length > 0) {
+    if (menuPlateShown) {
       setTabBarSlot(undefined);
       test[0].style.display = 'none';
     } else {
@@ -129,6 +130,19 @@ const MainTabs: React.FC<MainTabsProps> = () => {
       window.removeEventListener('resize', updateTabBarSlot);
     };
   }, []);
+
+  // React.useEffect(() => {
+  //   const menuButtonShown = document.querySelectorAll('.menu-button').length > 0;
+  //   const test = document.querySelectorAll<HTMLElement>('.middle-menu-button');
+
+  //   if (menuButtonShown) {
+  //     test[0].style.display = 'flex';
+  //     console.log('middle shown');
+  //   } else {
+  //     test[0].style.display = 'none';
+  //     console.log('middle hide');
+  //   }
+  // }, [test_location?.pathname]);
 
   const classes = useStyles();
   const [state, setState] = React.useState({
@@ -242,6 +256,7 @@ const MainTabs: React.FC<MainTabsProps> = () => {
             {/* <IonLabel>待進變果沒</IonLabel> */}
             <IonTabButtonBody active={activeTab == 0} icon={calendar} label="メニュー" />
           </IonTabButton>
+
           <IonTabButton tab="speakers" href="/tabs/speakers">
             {/* <IonIcon icon={people} /> */}
             {/* <IonLabel>待進變果沒</IonLabel> */}
@@ -258,12 +273,12 @@ const MainTabs: React.FC<MainTabsProps> = () => {
             {/* <IonLabel>待進變果沒</IonLabel> */}
             <IonTabButtonBody active={activeTab == 3} icon={informationCircle} label="ホテル" />
           </IonTabButton>
+          <div>helloworld</div>
         </IonTabBar>
       </IonTabs>
 
       <div className={'middle-menu-button'} onClick={toggleDrawer(anchor, true)}>
         <div
-          className={'middle-menu-button'}
           style={{
             position: 'fixed',
             bottom: '10px',
@@ -272,7 +287,8 @@ const MainTabs: React.FC<MainTabsProps> = () => {
             width: '66px',
             borderRadius: '33px',
             boxShadow: '0 0 10px rgba(0,0,0,0.3)',
-            zIndex: 999,
+            // just above menu tab bar
+            zIndex: 101,
 
             display: 'flex',
             flexDirection: 'column',
