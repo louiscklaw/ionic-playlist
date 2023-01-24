@@ -249,6 +249,7 @@ const MainTabs: React.FC<MainTabsProps> = () => {
           borderRadius: '33px',
           display: tabBarSlot == 'bottom' ? 'block' : 'none',
         }}
+        onClick={toggleDrawer('bottom', true)}
       >
         <div
           style={{
@@ -258,7 +259,6 @@ const MainTabs: React.FC<MainTabsProps> = () => {
             justifyContent: 'center',
             alignItems: 'center',
           }}
-          onClick={e => toggleDrawer('bottom', true)}
         >
           <TestSvg />
         </div>
