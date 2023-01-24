@@ -37,7 +37,7 @@ import MailIcon from '@material-ui/icons/Mail';
 
 import { Grid } from '@material-ui/core';
 
-import './helloworld.css';
+import './MainTabs.css';
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
