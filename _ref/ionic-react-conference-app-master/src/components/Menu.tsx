@@ -48,6 +48,7 @@ const routes = {
     { title: 'LoginIonOriginal', path: '/LoginIonOriginal', icon: logIn },
     { title: 'Introduction', path: '/Introduction', icon: logIn },
     { title: 'HotelLogin', path: '/HotelLogin', icon: logIn },
+    { title: 'WelcomeTour', path: '/WelcomeTour', icon: logIn },
     { title: 'TermsOfService', path: '/TermsOfService', icon: logIn },
     { title: 'Support', path: '/support', icon: help },
     { title: 'Signup', path: '/signup', icon: personAdd },

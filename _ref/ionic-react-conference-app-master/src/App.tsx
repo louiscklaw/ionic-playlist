@@ -40,6 +40,7 @@ import BlankPage from './pages/Blank';
 import HotelLogin from './pages/HotelLogin';
 import Introduction from './pages/Introduction';
 import TermsOfService from './pages/TermsOfService';
+import WelcomeTour from './pages/WelcomeTour';
 
 setupIonicReact();
 
@@ -104,6 +105,7 @@ const IonicApp: React.FC<IonicAppProps> = ({
             <Route path="/terms-of-service" component={Tutorial} />
             <Route path="/TermsOfService" component={TermsOfService} />
             <Route path="/restaurant-introduction" component={Introduction} />
+            <Route path="/WelcomeTour" component={WelcomeTour} />
             <Route
               path="/logout"
               render={() => {
