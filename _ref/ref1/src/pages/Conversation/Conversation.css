@@ -1,0 +1,20 @@
+.message-input {
+  width: 100%;
+  border: 1px solid var(--ion-color-medium);
+  border-radius: 10px;
+  background: #D9D9D9;
+  border-radius: 45px;
+  resize: none;
+  padding-left: 10px;
+  padding-right: 10px;
+ 
+}
+
+.msg-btn {
+--padding-start: 0.5em;
+--padding-end: 0.5em;
+}
+
+.container_msg {
+  overflow-y: scroll;
+}

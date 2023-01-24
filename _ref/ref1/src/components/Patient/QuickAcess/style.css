@@ -1,0 +1,23 @@
+.container {
+    margin-top: 1.8rem;
+}
+
+ion-row {
+    padding-right: 1rem;
+    justify-content: space-evenly;
+}
+
+
+ion-img {
+    align-self: center;
+    padding-top: 0;
+    margin-bottom: 2px;
+    width: 40px;
+    height: 40px;
+}
+
+
+/* .textCard {
+    padding-left: 0.25rem;
+    padding-left: 0.25rem;
+} */

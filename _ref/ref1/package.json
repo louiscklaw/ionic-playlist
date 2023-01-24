@@ -1,0 +1,104 @@
+{
+  "name": "virtumed",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@capacitor/app": "4.1.1",
+    "@capacitor/core": "4.5.0",
+    "@capacitor/haptics": "4.1.0",
+    "@capacitor/keyboard": "4.1.0",
+    "@capacitor/preferences": "^4.0.2",
+    "@capacitor/status-bar": "4.1.0",
+    "@ionic/react": "^6.0.0",
+    "@ionic/react-router": "^6.0.0",
+    "@mui/base": "^5.0.0-alpha.112",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^12.6.3",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^12.19.15",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-router": "^5.1.11",
+    "@types/react-router-dom": "^5.1.7",
+    "axios": "^1.2.1",
+    "express-pino-logger": "^7.0.0",
+    "history": "^4.9.0",
+    "ionicons": "^6.0.3",
+    "moment": "^2.29.4",
+    "ngx-autosize": "^2.0.3",
+    "node-env-run": "^4.0.2",
+    "nodemon": "^2.0.20",
+    "pino-colada": "^2.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-moment": "^1.1.2",
+    "react-redux": "^8.0.5",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-textarea-autosize": "^8.4.0",
+    "styled-components": "^5.3.6",
+    "sweetalert": "^2.1.2",
+    "twilio": "^3.84.0",
+    "twilio-video": "^2.26.0",
+    "typescript": "^4.1.3",
+    "web-vitals": "^0.2.4",
+    "workbox-background-sync": "^5.1.4",
+    "workbox-broadcast-update": "^5.1.4",
+    "workbox-cacheable-response": "^5.1.4",
+    "workbox-core": "^5.1.4",
+    "workbox-expiration": "^5.1.4",
+    "workbox-google-analytics": "^5.1.4",
+    "workbox-navigation-preload": "^5.1.4",
+    "workbox-precaching": "^5.1.4",
+    "workbox-range-requests": "^5.1.4",
+    "workbox-routing": "^5.1.4",
+    "workbox-strategies": "^5.1.4",
+    "workbox-streams": "^5.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --transformIgnorePatterns",
+    "eject": "react-scripts eject",
+    "server": "node-env-run server --exec nodemon | pino-colada",
+    "into_docker": "docker compose exec -it test bash",
+    "dev": "run-p server start"
+  },
+  "proxy": "http://localhost:3001",
+  "resolutions": {
+    "styled-components": "^5"
+  },
+ 
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@capacitor/cli": "4.5.0",
+    "@ionic/lab": "3.2.15",
+    "autoprefixer": "^10.4.13",
+    "node-env-run": "^4.0.2",
+    "nodemon": "^2.0.13",
+    "npm-run-all": "^4.1.5",
+    "pino-colada": "^2.2.0",
+    "postcss": "^8.4.19",
+    "react-scripts": "5.0.1",
+    "tailwindcss": "^3.2.4"
+  },
+  "description": "An Ionic project"
+}

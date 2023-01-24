@@ -1,0 +1,7 @@
+{
+  "name": "virtumed",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

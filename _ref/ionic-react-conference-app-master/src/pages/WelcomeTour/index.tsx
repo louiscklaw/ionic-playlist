@@ -19,15 +19,16 @@ import 'swiper/swiper.min.css';
 import '@ionic/react/css/ionic-swiper.css';
 import { connect } from '../../data/connect';
 import { RouteComponentProps } from 'react-router';
+import { Pagination } from 'swiper';
 
-interface OwnProps extends RouteComponentProps {}
+interface OwnProps extends RouteComponentProps { }
 
 interface DispatchProps {
   setHasSeenTutorial: typeof setHasSeenTutorial;
   setMenuEnabled: typeof setMenuEnabled;
 }
 
-interface TutorialProps extends OwnProps, DispatchProps {}
+interface TutorialProps extends OwnProps, DispatchProps { }
 
 const WelcomeTour: React.FC<TutorialProps> = ({ history, setHasSeenTutorial, setMenuEnabled }) => {
   const [showSkip, setShowSkip] = useState(true);
@@ -51,7 +52,7 @@ const WelcomeTour: React.FC<TutorialProps> = ({ history, setHasSeenTutorial, set
   return (
     <>
       <IonPage id="welcome-tour-page">
-        <IonHeader no-border>
+        {/* <IonHeader no-border>
           <IonToolbar>
             <IonButtons slot="end">
               {showSkip && (
@@ -61,18 +62,21 @@ const WelcomeTour: React.FC<TutorialProps> = ({ history, setHasSeenTutorial, set
               )}
             </IonButtons>
           </IonToolbar>
-        </IonHeader>
+        </IonHeader> */}
         <IonContent fullscreen>
           <Swiper onSwiper={setSwiper} onSlideChangeTransitionStart={handleSlideChangeStart}>
             <SwiperSlide>
-              <img src="assets/img/ica-slidebox-img-1.png" alt="" className="slide-image" />
-              <h2 className="slide-title">
-                Welcome to <b>ICA</b>
-              </h2>
-              <p>
-                The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a
-                demonstration of proper code use.
-              </p>
+              <div
+                style={{
+                  width: '100%',
+                  height: '100vh',
+                  backgroundImage: `url("https://plus.unsplash.com/premium_photo-1661766605673-ca5d7a59298f")`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
+                Swipe right to continue ->
+              </div>
             </SwiperSlide>
 
             <SwiperSlide>

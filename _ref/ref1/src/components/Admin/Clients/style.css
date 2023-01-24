@@ -1,0 +1,6 @@
+.titlePopular {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 90px;
+  }

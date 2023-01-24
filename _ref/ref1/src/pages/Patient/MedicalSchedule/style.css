@@ -1,0 +1,17 @@
+.hourSelector {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border-color: #d9d9d9;
+  border-width: 2px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+ion-datetime {
+    --background: #ffffff;
+    color: #000000;
+    border-radius: 16px;
+  } 
+  
+  
