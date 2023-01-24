@@ -105,10 +105,14 @@ const MainTabs: React.FC<MainTabsProps> = () => {
   }, [test_location?.pathname]);
 
   const updateTabBarSlot = () => {
+    const test = document.querySelectorAll<HTMLElement>('.middle-menu-button');
+
     if (document.querySelectorAll('.menu-pane-visible').length > 0) {
       setTabBarSlot(undefined);
+      test[0].style.display = 'none';
     } else {
       setTabBarSlot('bottom');
+      test[0].style.display = 'flex';
     }
   };
 
@@ -130,7 +134,7 @@ const MainTabs: React.FC<MainTabsProps> = () => {
   const [state, setState] = React.useState({
     top: false,
     left: false,
-    bottom: true,
+    bottom: false,
     right: false,
   });
 
@@ -232,7 +236,7 @@ const MainTabs: React.FC<MainTabsProps> = () => {
           <Route path="/tabs/about" render={() => <About />} exact={true} />
         </IonRouterOutlet>
 
-        <IonTabBar slot={tabBarSlot}>
+        <IonTabBar className={'menu-button'} slot={tabBarSlot}>
           <IonTabButton tab="schedule" href="/tabs/schedule">
             {/* <IonIcon icon={calendar} /> */}
             {/* <IonLabel>待進變果沒</IonLabel> */}
@@ -257,28 +261,31 @@ const MainTabs: React.FC<MainTabsProps> = () => {
         </IonTabBar>
       </IonTabs>
 
-      <div
-        style={{
-          position: 'fixed',
-          bottom: '10px',
-          left: 'calc( 50vw - 66px / 2 )',
-          height: '66px',
-          width: '66px',
-          borderRadius: '33px',
-          boxShadow: '0 0 10px rgba(0,0,0,0.3)',
-          zIndex: 999,
+      <div className={'middle-menu-button'} onClick={toggleDrawer(anchor, true)}>
+        <div
+          className={'middle-menu-button'}
+          style={{
+            position: 'fixed',
+            bottom: '10px',
+            left: 'calc( 50vw - 66px / 2 )',
+            height: '66px',
+            width: '66px',
+            borderRadius: '33px',
+            boxShadow: '0 0 10px rgba(0,0,0,0.3)',
+            zIndex: 999,
 
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
 
-          backgroundColor: 'tomato',
-        }}
-        // onClick={e => console.dir('hello world')}
-        onClick={toggleDrawer(anchor, true)}
-      >
-        <TestSvg />
+            backgroundColor: 'tomato',
+          }}
+          // onClick={e => console.dir('hello world')}
+          onClick={toggleDrawer(anchor, true)}
+        >
+          <TestSvg />
+        </div>
       </div>
     </>
   );
