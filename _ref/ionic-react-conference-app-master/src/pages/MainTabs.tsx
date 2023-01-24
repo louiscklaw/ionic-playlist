@@ -8,6 +8,7 @@ import {
   IonLabel,
   IonButton,
   IonTitle,
+  IonText,
 } from '@ionic/react';
 import { Route, Redirect, useLocation } from 'react-router';
 import { calendar, location, informationCircle, people } from 'ionicons/icons';
@@ -129,7 +130,7 @@ const MainTabs: React.FC<MainTabsProps> = () => {
   const [state, setState] = React.useState({
     top: false,
     left: false,
-    bottom: false,
+    bottom: true,
     right: false,
   });
 
@@ -167,12 +168,21 @@ const MainTabs: React.FC<MainTabsProps> = () => {
           flexDirection: 'column',
           alignItems: 'center',
           gap: '1rem',
-          margin: '1rem',
+          margin: '1rem 1rem 0 1rem',
         }}
         onClick={toggleDrawer(anchor, false)}
       >
-        <TestSvg />
-        <IonTitle>close</IonTitle>
+        <div
+          style={{
+            width: '66px',
+            height: '66px',
+            backgroundImage: `url("/assets/close-circle-svgrepo-com.svg")`,
+            backgroundSize: 'contain',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        ></div>
+        <IonText>關閉</IonText>
       </div>
     );
   }
@@ -188,8 +198,11 @@ const MainTabs: React.FC<MainTabsProps> = () => {
         }}
         style={{}}
       >
-        <div style={{ borderRadius: '3rem 3rem 0 0', padding: '2rem' }}>
+        <div style={{ borderRadius: '3rem 3rem 0 0', padding: '1rem' }}>
           <Grid container>
+            <Grid item xs={12} container justifyContent="center">
+              <div style={{ width: '30px', height: '6px', borderRadius: '3px', backgroundColor: 'lightgrey' }}></div>
+            </Grid>
             <Grid item xs={6} container justifyContent="center">
               <TestButton />
             </Grid>
