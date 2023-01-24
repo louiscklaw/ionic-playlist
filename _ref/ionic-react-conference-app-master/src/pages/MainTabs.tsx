@@ -1,5 +1,14 @@
 import React, { useRef, useState } from 'react';
-import { IonTabs, IonRouterOutlet, IonTabBar, IonTabButton, IonIcon, IonLabel, IonButton } from '@ionic/react';
+import {
+  IonTabs,
+  IonRouterOutlet,
+  IonTabBar,
+  IonTabButton,
+  IonIcon,
+  IonLabel,
+  IonButton,
+  IonTitle,
+} from '@ionic/react';
 import { Route, Redirect, useLocation } from 'react-router';
 import { calendar, location, informationCircle, people } from 'ionicons/icons';
 import SchedulePage from './SchedulePage';
@@ -25,6 +34,10 @@ import Button from '@material-ui/core/Button';
 
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+
+import { Grid } from '@material-ui/core';
+
+import './helloworld.css';
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
@@ -63,8 +76,18 @@ const IonTabButtonBody = ({ active, icon, label }: { active: boolean; icon: stri
   );
 };
 
+function TestButton() {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', margin: '1rem' }}>
+      <TestSvg />
+      <IonTitle>helloworld</IonTitle>
+    </div>
+  );
+}
+
 const MainTabs: React.FC<MainTabsProps> = () => {
   let [tabBarSlot, setTabBarSlot] = useState<'bottom' | undefined>(undefined);
+  const anchor = 'bottom';
 
   let [tab1Active, setTab1Active] = useState<boolean>(false);
   let [tab2Active, setTab2Active] = useState<boolean>(false);
@@ -106,11 +129,12 @@ const MainTabs: React.FC<MainTabsProps> = () => {
   const [state, setState] = React.useState({
     top: false,
     left: false,
-    bottom: true,
+    bottom: false,
     right: false,
   });
 
   const toggleDrawer = (anchor: Anchor, open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
+    console.log({ toggleDrawer: { open, anchor } });
     if (
       event.type === 'keydown' &&
       ((event as React.KeyboardEvent).key === 'Tab' || (event as React.KeyboardEvent).key === 'Shift')
@@ -129,18 +153,55 @@ const MainTabs: React.FC<MainTabsProps> = () => {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
+      style={{ backgroundColor: 'gold', borderRadius: '1rem 1rem 0 0', height: '100px' }}
     >
       <div>helloworld</div>
     </div>
   );
 
-  const anchor = 'bottom';
+  function CloseButton({ toggleDrawer }: any) {
+    return (
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '1rem',
+          margin: '1rem',
+        }}
+        onClick={toggleDrawer(anchor, false)}
+      >
+        <TestSvg />
+        <IonTitle>close</IonTitle>
+      </div>
+    );
+  }
 
   return (
     <>
       {/* <BottomDrawer /> */}
-      <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
-        {list(anchor)}
+      <Drawer
+        anchor={anchor}
+        open={state[anchor]}
+        onClose={toggleDrawer(anchor, false)}
+        PaperProps={{
+          classes: { root: 'helloworld-root' },
+        }}
+        style={{}}
+      >
+        <div style={{ borderRadius: '3rem 3rem 0 0', padding: '2rem' }}>
+          <Grid container>
+            <Grid item xs={6} container justifyContent="center">
+              <TestButton />
+            </Grid>
+            <Grid item xs={6} container justifyContent="center">
+              <TestButton />
+            </Grid>
+            <Grid item xs={12} container justifyContent="center">
+              <CloseButton toggleDrawer={toggleDrawer} />
+            </Grid>
+          </Grid>
+        </div>
       </Drawer>
 
       <IonTabs>
@@ -191,7 +252,6 @@ const MainTabs: React.FC<MainTabsProps> = () => {
           left: 'calc( 50vw - 66px / 2 )',
           height: '66px',
           width: '66px',
-          backgroundColor: 'tomato',
           borderRadius: '33px',
           boxShadow: '0 0 10px rgba(0,0,0,0.3)',
           zIndex: 999,
@@ -200,6 +260,8 @@ const MainTabs: React.FC<MainTabsProps> = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
+
+          backgroundColor: 'tomato',
         }}
         // onClick={e => console.dir('hello world')}
         onClick={toggleDrawer(anchor, true)}
