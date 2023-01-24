@@ -75,11 +75,11 @@ const SchedulePage: React.FC<SchedulePageProps> = ({ favoritesSchedule, schedule
           )}
           {ios && (
             <IonSegment value={segment} onIonChange={e => setSegment(e.detail.value as any)}>
-              <IonSegmentButton value="all">All</IonSegmentButton>
-              <IonSegmentButton value="favorites">Favorites</IonSegmentButton>
+              <IonSegmentButton value="all">全て</IonSegmentButton>
+              <IonSegmentButton value="favorites">お気に入り</IonSegmentButton>
             </IonSegment>
           )}
-          {!ios && !showSearchbar && <IonTitle>Schedule</IonTitle>}
+          {!ios && !showSearchbar && <IonTitle>あなたのスケジュール</IonTitle>}
           {showSearchbar && (
             <IonSearchbar
               showCancelButton="always"
@@ -106,8 +106,8 @@ const SchedulePage: React.FC<SchedulePageProps> = ({ favoritesSchedule, schedule
         {!ios && (
           <IonToolbar>
             <IonSegment value={segment} onIonChange={e => setSegment(e.detail.value as any)}>
-              <IonSegmentButton value="all">All</IonSegmentButton>
-              <IonSegmentButton value="favorites">Favorites</IonSegmentButton>
+              <IonSegmentButton value="all">全て</IonSegmentButton>
+              <IonSegmentButton value="favorites">お気に入り</IonSegmentButton>
             </IonSegment>
           </IonToolbar>
         )}

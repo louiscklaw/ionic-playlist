@@ -8,6 +8,6 @@ rm -rf yarn.lock
 # npm install @material-ui/core
 # npm install @material-ui/icons
 
-npm i -D
+npm i
 
 npm run start

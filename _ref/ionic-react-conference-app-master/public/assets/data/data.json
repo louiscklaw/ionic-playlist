@@ -30,10 +30,10 @@
               "id": "2"
             },
             {
-              "name": "Ionic Tooling",
-              "location": "Executive Ballroom",
-              "description": "Mobile devices and browsers are now advanced enough that developers can build native-quality mobile apps using open web technologies like HTML5, Javascript, and CSS. In this talk, we’ll provide background on why and how we created Ionic, the design decisions made as we integrated Ionic with Angular, and the performance considerations for mobile platforms that our team had to overcome. We’ll also review new and upcoming Ionic features, and talk about the hidden powers and benefits of combining mobile app development and Angular.",
-              "speakerNames": ["Rachel Rabbit"],
+              "name": "イオンツーリング",
+              "location": "エグゼクティブ ボールルーム",
+              "description": "モバイル デバイスとブラウザーは、開発者が HTML5、Javascript、CSS などのオープン Web テクノロジを使用してネイティブ品質のモバイル アプリを構築できるほど高度になっています。この講演では、Ionic を作成した理由と方法、Ionic と Angular を統合する際に行った設計上の決定、およびチームが克服しなければならなかったモバイル プラットフォームのパフォーマンスに関する考慮事項について説明します。また、今後の Ionic の新機能を確認し、モバイル アプリ開発と Angular を組み合わせることの隠れた力と利点についても説明します。",
+              "speakerNames": ["レイチェル・ラビット"],
               "timeStart": "9:45 am",
               "timeEnd": "10:00 am",
               "tracks": ["Tooling"],

@@ -106,7 +106,7 @@ const MainTabs: React.FC<MainTabsProps> = () => {
   const [state, setState] = React.useState({
     top: false,
     left: false,
-    bottom: false,
+    bottom: true,
     right: false,
   });
 
@@ -130,23 +130,7 @@ const MainTabs: React.FC<MainTabsProps> = () => {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
+      <div>helloworld</div>
     </div>
   );
 
@@ -221,8 +205,6 @@ const MainTabs: React.FC<MainTabsProps> = () => {
         onClick={toggleDrawer(anchor, true)}
       >
         <TestSvg />
-
-        <div></div>
       </div>
     </>
   );

@@ -11,7 +11,6 @@ services:
     volumes:
       - $PWD:/app
       - test_node_modules:/app/node_modules
-
     command: sleep infinity
     # command: ./serve.sh
     # labels:

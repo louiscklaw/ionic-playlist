@@ -1,4 +1,14 @@
-import { IonItemDivider, IonItemGroup, IonLabel, IonList, IonListHeader, IonAlert, AlertButton } from '@ionic/react';
+import {
+  IonItemDivider,
+  IonItemGroup,
+  IonLabel,
+  IonList,
+  IonListHeader,
+  IonAlert,
+  AlertButton,
+  IonTitle,
+  IonText,
+} from '@ionic/react';
 import React, { useState, useCallback } from 'react';
 import { Schedule, Session } from '../models/Schedule';
 import SessionListItem from './SessionListItem';
@@ -43,7 +53,18 @@ const SessionList: React.FC<SessionListProps> = ({
   if (schedule.groups.length === 0 && !hide) {
     return (
       <IonList>
-        <IonListHeader>No Sessions Found</IonListHeader>
+        <IonListHeader>
+          <div
+            style={{
+              width: '100%',
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'center',
+            }}
+          >
+            <IonText>セッションが見つかりません</IonText>
+          </div>
+        </IonListHeader>
       </IonList>
     );
   }
