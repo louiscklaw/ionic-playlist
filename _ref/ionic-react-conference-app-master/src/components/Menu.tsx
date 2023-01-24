@@ -31,6 +31,7 @@ import { setDarkMode } from '../data/user/user.actions';
 
 import './Menu.css';
 
+// bookmark: menu drawer
 const routes = {
   appPages: [
     { title: 'Schedule', path: '/tabs/schedule', icon: calendarOutline },
@@ -45,6 +46,8 @@ const routes = {
   ],
   loggedOutPages: [
     { title: 'LoginIonOriginal', path: '/LoginIonOriginal', icon: logIn },
+    { title: 'Introduction', path: '/Introduction', icon: logIn },
+    { title: 'HotelLogin', path: '/HotelLogin', icon: logIn },
     { title: 'Support', path: '/support', icon: help },
     { title: 'Signup', path: '/signup', icon: personAdd },
   ],

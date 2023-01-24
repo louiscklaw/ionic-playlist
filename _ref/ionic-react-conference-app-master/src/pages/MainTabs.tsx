@@ -110,7 +110,11 @@ const MainTabs: React.FC<MainTabsProps> = () => {
     console.log('updateTabBarSlot');
     const test = document.querySelectorAll<HTMLElement>('.middle-menu-button');
     const menuPlateShown = document.querySelectorAll('.menu-pane-visible').length > 0;
-    if (menuPlateShown) {
+    const hideBottomPathname = ['/Introduction'];
+
+    let hideBottomMenu = menuPlateShown || hideBottomPathname;
+
+    if (hideBottomMenu) {
       setTabBarSlot(undefined);
       //   test[0].style.display = 'none';
     } else {
@@ -271,6 +275,7 @@ const MainTabs: React.FC<MainTabsProps> = () => {
             Using the render method prop cuts down the number of renders your components will have due to route changes.
             Use the component prop when your component depends on the RouterComponentProps passed in automatically.
           */}
+          {/* bookmark: bottom menu */}
           <Route path="/tabs/schedule" render={() => <SchedulePage />} exact={true} />
           <Route path="/tabs/speakers" render={() => <SpeakerList />} exact={true} />
           <Route path="/tabs/speakers/:id" component={SpeakerDetail} exact={true} />

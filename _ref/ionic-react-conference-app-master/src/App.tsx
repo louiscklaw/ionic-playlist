@@ -37,6 +37,8 @@ import HomeOrTutorial from './components/HomeOrTutorial';
 import { Schedule } from './models/Schedule';
 import RedirectToLogin from './components/RedirectToLogin';
 import BlankPage from './pages/Blank';
+import HotelLogin from './pages/HotelLogin';
+import Introduction from './pages/Introduction';
 
 setupIonicReact();
 
@@ -88,13 +90,17 @@ const IonicApp: React.FC<IonicAppProps> = ({
               We use IonRoute here to keep the tabs state intact,
               which makes transitions between tabs and non tab pages smooth
             */}
+            {/* bookmark: route */}
             <Route path="/tabs" render={() => <MainTabs />} />
             <Route path="/blank" render={() => <BlankPage />} />
             <Route path="/account" component={Account} />
             <Route path="/LoginIonOriginal" component={LoginIonOriginal} />
+            <Route path="/HotelLogin" component={HotelLogin} />
+            <Route path="/Introduction" component={Introduction} />
             <Route path="/signup" component={Signup} />
             <Route path="/support" component={Support} />
             <Route path="/tutorial" component={Tutorial} />
+            <Route path="/restaurant-introduction" component={Introduction} />
             <Route
               path="/logout"
               render={() => {
