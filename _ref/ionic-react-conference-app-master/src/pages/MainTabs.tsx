@@ -99,7 +99,9 @@ const MainTabs: React.FC<MainTabsProps> = () => {
   let test_location = useLocation();
   React.useEffect(() => {
     // console.dir(test_location.pathname);
-    let temp = ['/tabs/schedule', '/tabs/speakers', '/tabs/map', '/tabs/about'].indexOf(test_location.pathname);
+    let temp = ['/tabs/schedule', '/tabs/speakers', '/tabs/login', '/tabs/map', '/tabs/about'].indexOf(
+      test_location.pathname,
+    );
     console.dir({ temp });
     setActiveTab(temp);
   }, [test_location?.pathname]);
@@ -261,47 +263,23 @@ const MainTabs: React.FC<MainTabsProps> = () => {
             {/* <IonLabel>待進變果沒</IonLabel> */}
             <IonTabButtonBody active={activeTab == 1} icon={people} label="注文" />
           </IonTabButton>
-          <IonTabButton disabled style={{}} tab="speakers" href="/tabs/speakers"></IonTabButton>
+          <IonTabButton tab="blank" href="/tabs/blank">
+            {/* <IonIcon icon={location} /> */}
+            {/* <IonLabel>待進變果沒</IonLabel> */}
+            <IonTabButtonBody active={activeTab == 2} icon={location} label="blank" />
+          </IonTabButton>
           <IonTabButton tab="map" href="/tabs/map">
             {/* <IonIcon icon={location} /> */}
             {/* <IonLabel>待進變果沒</IonLabel> */}
-            <IonTabButtonBody active={activeTab == 2} icon={location} label="注文履歴" />
+            <IonTabButtonBody active={activeTab == 3} icon={location} label="注文履歴" />
           </IonTabButton>
           <IonTabButton tab="about" href="/tabs/about">
             {/* <IonIcon icon={location} /> */}
             {/* <IonLabel>待進變果沒</IonLabel> */}
-            <IonTabButtonBody active={activeTab == 3} icon={informationCircle} label="ホテル" />
+            <IonTabButtonBody active={activeTab == 4} icon={informationCircle} label="ホテル" />
           </IonTabButton>
-          <div>helloworld</div>
         </IonTabBar>
       </IonTabs>
-
-      <div className={'middle-menu-button'} onClick={toggleDrawer(anchor, true)}>
-        <div
-          style={{
-            position: 'fixed',
-            bottom: '10px',
-            left: 'calc( 50vw - 66px / 2 )',
-            height: '66px',
-            width: '66px',
-            borderRadius: '33px',
-            boxShadow: '0 0 10px rgba(0,0,0,0.3)',
-            // just above menu tab bar
-            zIndex: 101,
-
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-
-            backgroundColor: 'tomato',
-          }}
-          // onClick={e => console.dir('hello world')}
-          onClick={toggleDrawer(anchor, true)}
-        >
-          <TestSvg />
-        </div>
-      </div>
     </>
   );
 };

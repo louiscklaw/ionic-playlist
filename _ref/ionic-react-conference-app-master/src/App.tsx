@@ -36,6 +36,7 @@ import Tutorial from './pages/Tutorial';
 import HomeOrTutorial from './components/HomeOrTutorial';
 import { Schedule } from './models/Schedule';
 import RedirectToLogin from './components/RedirectToLogin';
+import BlankPage from './pages/Blank';
 
 setupIonicReact();
 
@@ -88,6 +89,7 @@ const IonicApp: React.FC<IonicAppProps> = ({
               which makes transitions between tabs and non tab pages smooth
             */}
             <Route path="/tabs" render={() => <MainTabs />} />
+            <Route path="/blank" render={() => <BlankPage />} />
             <Route path="/account" component={Account} />
             <Route path="/LoginIonOriginal" component={LoginIonOriginal} />
             <Route path="/signup" component={Signup} />
