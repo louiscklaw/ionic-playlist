@@ -107,15 +107,16 @@ const MainTabs: React.FC<MainTabsProps> = () => {
   }, [test_location?.pathname]);
 
   const updateTabBarSlot = () => {
-    // const test = document.querySelectorAll<HTMLElement>('.middle-menu-button');
-    // const menuPlateShown = document.querySelectorAll('.menu-pane-visible').length > 0;
-    // if (menuPlateShown) {
-    //   setTabBarSlot(undefined);
-    //   test[0].style.display = 'none';
-    // } else {
-    //   setTabBarSlot('bottom');
-    //   test[0].style.display = 'flex';
-    // }
+    console.log('updateTabBarSlot');
+    const test = document.querySelectorAll<HTMLElement>('.middle-menu-button');
+    const menuPlateShown = document.querySelectorAll('.menu-pane-visible').length > 0;
+    if (menuPlateShown) {
+      setTabBarSlot(undefined);
+      //   test[0].style.display = 'none';
+    } else {
+      setTabBarSlot('bottom');
+      //   test[0].style.display = 'flex';
+    }
   };
 
   React.useEffect(() => {
@@ -165,19 +166,19 @@ const MainTabs: React.FC<MainTabsProps> = () => {
     setState({ ...state, [anchor]: open });
   };
 
-  const list = (anchor: Anchor) => (
-    <div
-      className={clsx(classes.list, {
-        [classes.fullList]: anchor === 'top' || anchor === 'bottom',
-      })}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-      style={{ backgroundColor: 'gold', borderRadius: '1rem 1rem 0 0', height: '100px' }}
-    >
-      <div>helloworld</div>
-    </div>
-  );
+  // const list = (anchor: Anchor) => (
+  //   <div
+  //     className={clsx(classes.list, {
+  //       [classes.fullList]: anchor === 'top' || anchor === 'bottom',
+  //     })}
+  //     role="presentation"
+  //     onClick={toggleDrawer(anchor, false)}
+  //     onKeyDown={toggleDrawer(anchor, false)}
+  //     style={{ backgroundColor: 'gold', borderRadius: '1rem 1rem 0 0', height: '100px' }}
+  //   >
+  //     <div>helloworld</div>
+  //   </div>
+  // );
 
   function CloseButton({ toggleDrawer }: any) {
     return (
@@ -236,18 +237,31 @@ const MainTabs: React.FC<MainTabsProps> = () => {
       </Drawer>
 
       <div
-        id="helloworld-id"
+        id="middle-menu-button"
         style={{
           position: 'fixed',
           bottom: '10px',
-          left: 'calc( 50% - 50px )',
-          height: '100px',
-          width: '100px',
-          backgroundColor: 'gold',
+          left: 'calc( 50% - 33px )',
+          height: '66px',
+          width: '66px',
+          backgroundColor: 'tomato',
           zIndex: 999,
+          borderRadius: '33px',
+          display: tabBarSlot == 'bottom' ? 'block' : 'none',
         }}
       >
-        helloworld
+        <div
+          style={{
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+          onClick={e => toggleDrawer('bottom', true)}
+        >
+          <TestSvg />
+        </div>
       </div>
 
       <IonTabs>
@@ -266,7 +280,7 @@ const MainTabs: React.FC<MainTabsProps> = () => {
           <Route path="/tabs/about" render={() => <About />} exact={true} />
         </IonRouterOutlet>
 
-        <IonTabBar className={'menu-button'} slot={'bottom'}>
+        <IonTabBar className={'menu-button'} slot={tabBarSlot}>
           <IonTabButton tab="schedule" href="/tabs/schedule">
             {/* <IonIcon icon={calendar} /> */}
             {/* <IonLabel>待進變果沒</IonLabel> */}
