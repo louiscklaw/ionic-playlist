@@ -235,6 +235,21 @@ const MainTabs: React.FC<MainTabsProps> = () => {
         </div>
       </Drawer>
 
+      <div
+        id="helloworld-id"
+        style={{
+          position: 'fixed',
+          bottom: '10px',
+          left: 'calc( 50% - 50px )',
+          height: '100px',
+          width: '100px',
+          backgroundColor: 'gold',
+          zIndex: 999,
+        }}
+      >
+        helloworld
+      </div>
+
       <IonTabs>
         <IonRouterOutlet>
           <Redirect exact path="/tabs" to="/tabs/schedule" />
