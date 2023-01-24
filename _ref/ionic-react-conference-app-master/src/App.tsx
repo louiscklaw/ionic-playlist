@@ -39,6 +39,7 @@ import RedirectToLogin from './components/RedirectToLogin';
 import BlankPage from './pages/Blank';
 import HotelLogin from './pages/HotelLogin';
 import Introduction from './pages/Introduction';
+import TermsOfService from './pages/TermsOfService';
 
 setupIonicReact();
 
@@ -100,6 +101,8 @@ const IonicApp: React.FC<IonicAppProps> = ({
             <Route path="/signup" component={Signup} />
             <Route path="/support" component={Support} />
             <Route path="/tutorial" component={Tutorial} />
+            <Route path="/terms-of-service" component={Tutorial} />
+            <Route path="/TermsOfService" component={TermsOfService} />
             <Route path="/restaurant-introduction" component={Introduction} />
             <Route
               path="/logout"
