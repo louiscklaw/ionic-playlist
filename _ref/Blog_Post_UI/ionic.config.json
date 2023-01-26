@@ -1,0 +1,7 @@
+{
+  "name": "Ionic Blog Posts",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

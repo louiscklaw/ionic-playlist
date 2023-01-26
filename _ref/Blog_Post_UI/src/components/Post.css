@@ -1,0 +1,43 @@
+.post-author-avatar {
+
+    height: 2rem;
+    width: 2rem;
+    border-radius: 500px;
+}
+
+.post-title {
+
+    font-size: 1.4rem;
+    margin-top: 0.75rem;
+}
+
+.post-content {
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.post-footer {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    border-top: 2px solid rgb(245, 245, 245);
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+
+.post-category {
+
+    margin-top: 1.1rem;
+}
+
+.post-image {
+
+    width: 100%;
+}
