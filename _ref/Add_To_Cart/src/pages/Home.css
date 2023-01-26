@@ -1,0 +1,19 @@
+.price-container {
+
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+
+    margin-top: 0.7rem;
+    border: 1px solid var(--ion-color-primary);
+    color: var(--ion-color-primary);
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+}

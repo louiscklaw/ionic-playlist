@@ -1,0 +1,16 @@
+.buttonContainer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.button {
+
+    --padding-top: 1.75rem;
+    --padding-bottom: 1.75rem;
+    --padding-start: 1.75rem;
+    --padding-end: 1.75rem;
+}
