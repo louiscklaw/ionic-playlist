@@ -1,0 +1,54 @@
+.page {
+
+    ion-header {
+
+        background-color: #373b5e;
+    }
+
+    ion-toolbar {
+
+        --border-style: none;
+        --background: #373b5e;
+        --color: white;
+        --min-height: 8rem;
+        --stripe: #373b5e;
+        --bg: #3e4368;
+        --background: transparent;
+        background: linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0,
+        linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
+        linear-gradient(315deg, var(--bg) 25%, transparent 25%),
+        linear-gradient(45deg, var(--bg) 25%, transparent 25%);
+        background-size: 100px 100px;
+        background-color: var(--stripe);
+		
+		ion-title {
+
+			--color: white;
+			font-size: 1rem;
+		}
+    }
+}
+
+.movieOverview {
+
+	background-color:#373b5e;
+	padding: 2rem;
+	color: white;
+
+	ion-card-subtitle {
+
+		--color: white;
+	}
+}
+
+.backButton {
+
+	padding: 0;
+	margin: 0;
+	padding-bottom: 0.4rem;
+}
+
+.infoBadge {
+
+	background-color:rgba(44, 53, 105, 0.8);
+}
