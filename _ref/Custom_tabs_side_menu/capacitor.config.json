@@ -1,0 +1,17 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "tabs-with-menu",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {},
+  "server": {
+    "url": "http://localhost:8101",
+    "cleartext": true
+  }
+}
