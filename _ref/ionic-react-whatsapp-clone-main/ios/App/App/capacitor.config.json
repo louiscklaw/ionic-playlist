@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "ionic-react-whatsapp-clone",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
