@@ -1,16 +1,40 @@
 #product-detail-page {
-  ion-toolbar {
-    --background: rgba(0, 0, 0, 0.1);
-    // --color: white;
+  // ion-button {
+  //   --background: rgba(0, 0, 0, 0);
+  //   // --background-hover: rgba(0, 0, 0, 0);
+  //   // --background-activated: rgba(0, 0, 0, 0);
+  //   // --background-focused: rgba(0, 0, 0, 0);
+
+  //   --color: white;
+  // }
+  #content-header {
+    transition: 1s
   }
 
-  ion-button {
-    --background: rgba(0, 0, 0, 0);
-    // --background-hover: rgba(0, 0, 0, 0);
-    // --background-activated: rgba(0, 0, 0, 0);
-    // --background-focused: rgba(0, 0, 0, 0);
+  .text-black {
+    ion-button {
+      --background: rgba(0, 0, 0, 0);
+      --color: white;
 
-    // --color: white;
+    }
+
+    ion-toolbar {
+      --background: rgba(0, 0, 0, 0.1);
+
+    }
+  }
+
+  .text-white {
+    ion-button {
+      // --background: rgba(255, 255, 255, 0.8);
+      --color: black;
+
+    }
+
+    ion-toolbar {
+      --background: rgba(255, 255, 255, 0.8);
+
+    }
   }
 
   .footer {

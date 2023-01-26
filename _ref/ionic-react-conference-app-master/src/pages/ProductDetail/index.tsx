@@ -26,26 +26,30 @@ import './style.scss';
 
 function ProductDetail() {
   // let contentRef = useIonRef();
-  const paintWhite = () => {
+  const paintWhiteHeader = () => {
     let el: HTMLElement | null = document.querySelector('#content-header');
     if (el) {
-      el.style.backgroundColor = 'white';
+      console.log('paintWhiteHeader');
+      el.classList.remove('text-black');
+      el.classList.add('text-white');
     }
   };
 
-  const paintReset = () => {
+  const paintResetHeader = () => {
     let el: HTMLElement | null = document.querySelector('#content-header');
     if (el) {
-      el.style.backgroundColor = 'unset';
+      // el.style.backgroundColor = 'unset';
+      el.classList.add('text-black');
+      el.classList.remove('text-white');
     }
   };
 
   const userScroll = (e: any) => {
     let { scrollTop } = e.target.detail;
     if (scrollTop > 100) {
-      paintWhite();
+      paintWhiteHeader();
     } else {
-      paintReset();
+      paintResetHeader();
     }
   };
 
@@ -53,7 +57,11 @@ function ProductDetail() {
     <>
       <IonPage id="product-detail-page">
         <IonContent id="product-content" scrollEvents={true} onIonScroll={e => userScroll(e)}>
-          <div id="content-header" style={{ position: 'fixed', width: '100%' }}>
+          <div
+            id="content-header"
+            className="text-black"
+            style={{ transition: '1s', position: 'fixed', width: '100%' }}
+          >
             <IonHeader>
               <IonToolbar>
                 <IonButtons slot="start">
