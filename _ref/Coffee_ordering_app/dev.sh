@@ -3,8 +3,8 @@
 set -ex
 
 
-npx browserslist@latest --update-db
-npm i 
+# npx browserslist@latest --update-db
+yarn 
 
 # ionic serve
-npm run start
+yarn start
