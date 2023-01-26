@@ -1,0 +1,7 @@
+{
+  "name": "ionic-accordion",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
