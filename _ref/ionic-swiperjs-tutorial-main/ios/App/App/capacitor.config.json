@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "ionic-swiperjs-tutorial",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

@@ -1,0 +1,7 @@
+{
+  "name": "ionic-swiperjs-tutorial",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
