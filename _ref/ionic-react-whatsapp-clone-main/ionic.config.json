@@ -1,7 +1,0 @@
-{
-  "name": "ionic-react-whatsapp-clone",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react"
-}
