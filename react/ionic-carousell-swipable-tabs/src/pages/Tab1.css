@@ -1,0 +1,7 @@
+ion-segment-button {
+  --indicator-color: transparent !important;
+  --indicator-color-checked: transparent !important;
+
+  --padding-end: 4px;
+  --padding-start: 4px;
+}
