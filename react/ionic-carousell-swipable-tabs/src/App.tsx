@@ -1,13 +1,18 @@
 import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
+  IonContent,
+  IonHeader,
   IonIcon,
   IonLabel,
+  IonMenu,
   IonRouterOutlet,
   IonSplitPane,
   IonTabBar,
   IonTabButton,
   IonTabs,
+  IonTitle,
+  IonToolbar,
   setupIonicReact,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
@@ -38,14 +43,22 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Menu from './components/Menu';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-    <IonSplitPane contentId="main">
-      <IonTabs>
+    {/* <IonSplitPane contentId="main"> */}
+      {/* <IonMenu type="overlay" disabled={true} contentId="main"> */}
+      {/* </IonMenu> */}
+
+      <IonSplitPane when="xs" contentId="main">
+        <Menu />
+
+
+
         <IonRouterOutlet>
           <Route path="/tabs" render={() => <MainTabs />} />
 
@@ -64,26 +77,11 @@ const App: React.FC = () => (
 
 
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to="/tabs/tab1" />
           </Route>
 
 
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
       </IonSplitPane>
     </IonReactRouter>
   </IonApp>

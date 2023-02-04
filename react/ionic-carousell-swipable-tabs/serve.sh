@@ -6,6 +6,9 @@ set -ex
 # npm i -D @types/react-i18next --save
 
 # npm i @ionic/storage --save
+# react-i18next
+npm i react-i18next --save
+
 
 npm i -D
 

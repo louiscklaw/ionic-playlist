@@ -3,6 +3,7 @@ import { RouteComponentProps, withRouter, useLocation } from 'react-router';
 
 import {
   IonContent,
+  IonHeader,
   IonIcon,
   IonItem,
   IonLabel,
@@ -10,7 +11,9 @@ import {
   IonListHeader,
   IonMenu,
   IonMenuToggle,
+  IonTitle,
   IonToggle,
+  IonToolbar,
 } from '@ionic/react';
 import {
   calendarOutline,
@@ -31,7 +34,22 @@ import './Menu.css';
 interface MenuProps {}
 
 const Menu: React.FC<MenuProps> = () =>{
+
+  // bookmark: left menu
   return (
-    <>Menu placeholder</>
+    <>      
+    <IonMenu type="overlay" disabled={true} contentId="main">
+    <IonHeader>
+      <IonToolbar color="tertiary">
+        <IonTitle>Menu</IonTitle>
+      </IonToolbar>
+    </IonHeader>
+    <IonContent className="ion-padding">
+      Menu Content
+    </IonContent>
+  </IonMenu>
+</>
   )
 }
+
+export default Menu
