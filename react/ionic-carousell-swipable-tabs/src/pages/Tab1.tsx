@@ -88,7 +88,7 @@ const Tab1: React.FC = () => {
 
           <IonItemGroup>
             <IonItemDivider sticky>
-              <IonSegment mode={'md'} scrollable={true} value={segment} style={{paddingBottom:'10px'}}>
+              <IonSegment mode={'md'} scrollable={true} value={segment} style={{ paddingBottom: '10px' }}>
                 <IonSegmentButton value="default1">
                   <div
                     style={{

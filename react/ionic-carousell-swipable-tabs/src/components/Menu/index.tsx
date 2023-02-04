@@ -33,23 +33,9 @@ import './Menu.css';
 
 interface MenuProps {}
 
-const Menu: React.FC<MenuProps> = () =>{
-
+const Menu: React.FC<MenuProps> = () => {
   // bookmark: left menu
-  return (
-    <>      
-    <IonMenu type="overlay" disabled={true} contentId="main">
-    <IonHeader>
-      <IonToolbar color="tertiary">
-        <IonTitle>Menu</IonTitle>
-      </IonToolbar>
-    </IonHeader>
-    <IonContent className="ion-padding">
-      Menu Content
-    </IonContent>
-  </IonMenu>
-</>
-  )
-}
+  return <>Menu Content 123321</>;
+};
 
-export default Menu
+export default Menu;

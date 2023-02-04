@@ -18,7 +18,6 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
 
-
 import SampleBlank from './pages/SampleBlank';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
@@ -50,16 +49,14 @@ setupIonicReact();
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-    {/* <IonSplitPane contentId="main"> */}
+      {/* <IonSplitPane contentId="main"> */}
       {/* <IonMenu type="overlay" disabled={true} contentId="main"> */}
       {/* </IonMenu> */}
 
-      <IonSplitPane when="xs" contentId="main">
+      <IonSplitPane when="md" contentId="main">
         <Menu />
 
-
-
-        <IonRouterOutlet>
+        <IonRouterOutlet id="main">
           <Route path="/tabs" render={() => <MainTabs />} />
 
           <Route exact path="/tab1">
@@ -74,13 +71,9 @@ const App: React.FC = () => (
 
           <Route path="/sample_blank" component={SampleBlank} />
 
-
-
           <Route exact path="/">
             <Redirect to="/tabs/tab1" />
           </Route>
-
-
         </IonRouterOutlet>
       </IonSplitPane>
     </IonReactRouter>

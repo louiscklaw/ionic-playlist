@@ -35,7 +35,7 @@ export const AppContext = createContext<AppContextState>({
   browser_store: {},
 });
 
-export const AppContextProvider: React.FC = (props:any) => {
+export const AppContextProvider: React.FC = (props: any) => {
   const [store, dispatch] = useReducer(reducers, initialState);
 
   useEffect(() => {
