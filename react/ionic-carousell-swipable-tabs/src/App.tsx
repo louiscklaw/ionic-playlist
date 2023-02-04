@@ -18,6 +18,7 @@ import SampleBlank from './pages/SampleBlank';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
+import MainTabs from './pages/MainTabs';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -46,6 +47,8 @@ const App: React.FC = () => (
     <IonSplitPane contentId="main">
       <IonTabs>
         <IonRouterOutlet>
+          <Route path="/tabs" render={() => <MainTabs />} />
+
           <Route exact path="/tab1">
             <Tab1 />
           </Route>
