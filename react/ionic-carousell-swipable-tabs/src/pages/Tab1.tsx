@@ -113,7 +113,7 @@ const Tab1: React.FC = () => {
                         backgroundRepeat: 'no-repeat',
                       }}
                     ></div>
-                    <div style={{ fontSize: '0.8rem', color: 'rgba(12,12,12,0.8)' }}>勤常勉旋</div>
+                    <div style={{ fontSize: '0.8rem', color: 'rgba(12,12,12,0.8)' }}>勤常勉旋123321</div>
                   </div>
                 </IonSegmentButton>
                 <IonSegmentButton value="default2">

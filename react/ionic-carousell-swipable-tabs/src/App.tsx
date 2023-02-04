@@ -4,6 +4,7 @@ import {
   IonIcon,
   IonLabel,
   IonRouterOutlet,
+  IonSplitPane,
   IonTabBar,
   IonTabButton,
   IonTabs,
@@ -39,6 +40,7 @@ setupIonicReact();
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
+    <IonSplitPane contentId="main">
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/tab1">
@@ -69,6 +71,7 @@ const App: React.FC = () => (
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
+      </IonSplitPane>
     </IonReactRouter>
   </IonApp>
 );
